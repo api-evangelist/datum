@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.datum.net/.well-known/openid-configuration
+docs: https://www.datum.net/docs/datumctl/auth/logging-in.md
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode, clientCredentials, deviceCode, jwtBearer, refreshToken, implicit]
+  pkce: S256
+  api_key_in: []
+  note: >-
+    Datum Cloud authenticates with OAuth 2.0 / OIDC bearer tokens issued by
+    https://auth.datum.net. Interactive users log in via authorization-code +
+    PKCE (browser or device-code) through datumctl; CI/headless automation uses
+    service accounts (client_credentials / private_key_jwt). There are no static
+    API keys — datumctl stores tokens in the system keyring.
+issuer: https://auth.datum.net
+schemes:
+- name: OIDC
+  type: openIdConnect
+  openIdConnectUrl: https://www.datum.net/.well-known/openid-configuration
+  sources: [well-known/datum-openid-configuration.json]
+- name: OAuth2
+  type: oauth2
+  sources: [well-known/datum-openid-configuration.json]
+  endpoints:
+    authorization: https://auth.datum.net/oauth/v2/authorize
+    token: https://auth.datum.net/oauth/v2/token
+    introspection: https://auth.datum.net/oauth/v2/introspect
+    userinfo: https://auth.datum.net/oidc/v1/userinfo
+    revocation: https://auth.datum.net/oauth/v2/revoke
+    device_authorization: https://auth.datum.net/oauth/v2/device_authorization
+    jwks: https://auth.datum.net/oauth/v2/keys
+    end_session: https://auth.datum.net/oidc/v1/end_session
+  grant_types:
+  - authorization_code
+  - client_credentials
+  - refresh_token
+  - urn:ietf:params:oauth:grant-type:device_code
+  - urn:ietf:params:oauth:grant-type:jwt-bearer
+  - implicit
+  token_endpoint_auth_methods:
+  - none
+  - client_secret_basic
+  - client_secret_post
+  - private_key_jwt
+  code_challenge_methods: [S256]
+  id_token_signing_alg: [EdDSA, RS256, RS384, RS512, ES256, ES384, ES512]
+service_accounts:
+  supported: true
+  docs: https://www.datum.net/docs/datumctl/auth/service-accounts.md
