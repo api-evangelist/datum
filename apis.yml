@@ -1,21 +1,81 @@
 aid: datum
 name: Datum
-description: 'Datum is a company surfaced as a portfolio company of crv and added to the API Evangelist
-  network as a stub for enrichment. Sector: data. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Datum is an open source network cloud built for AI, founded in 2024 and backed
+  by $13.6M from Amplify Partners, CRV, Encoded Ventures, Cervin Ventures,
+  Ex/Ante, Step Function, and Vine Ventures, and founded by Zac Smith and Jacob
+  Smith (ex-Equinix, Packet). Datum gives AI-native developers and alternative
+  cloud providers critical, neutral network infrastructure to compete at scale:
+  an Envoy-based AI Edge with a Coraza OWASP WAF, Layer 7 HTTPProxy/HTTPRoute
+  traffic management, authoritative DNS and programmatic domain management,
+  QUIC-based secure tunnels (Connectors) powered by Iroh, and a Galactic VPC
+  global backbone, all deployed across 17+ global network locations. The platform
+  is exposed through a Kubernetes-style declarative control-plane API at
+  api.datum.net, the datumctl CLI, an official MCP server, and packaged agent
+  Skills, with OAuth 2.0 / OIDC authentication and a forever-free Builder tier.
+  Core platform is licensed AGPLv3.
 url: https://raw.githubusercontent.com/api-evangelist/datum/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.datum.net/brand/social/
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - crv
-x-tier: stub
-x-tier-reason: portfolio-lead
+- amplify-partners
+- encoded-ventures
+- cervin-ventures
+- ex-ante
+- step-function
+- vine-ventures
+x-tier: enriched
+x-tier-reason: portfolio-lead-enriched
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Data
-apis: []
+- Cloud
+- Networking
+- Edge
+- AI
+- DNS
+- Infrastructure
+- CDN
+- Developer Tools
+apis:
+- name: Datum Cloud API
+  description: >-
+    Kubernetes-style declarative control-plane API for managing Datum Cloud
+    resources — projects, domains, DNS zones and record sets, gateways,
+    HTTPProxies, HTTPRoutes, traffic protection policies (WAF), and
+    organization/user membership. Authenticated with OAuth 2.0 / OIDC bearer
+    tokens or service-account credentials; the surface is also reachable via the
+    datumctl CLI, the official MCP server, and kubectl/Helm/Terraform through an
+    exec-credential kubeconfig.
+  humanURL: https://www.datum.net/docs/api/reference/
+  baseURL: https://api.datum.net
+  tags:
+  - Cloud
+  - Networking
+  - DNS
+  - Edge
+  properties:
+  - type: Documentation
+    url: https://www.datum.net/docs/
+  - type: APIReference
+    url: https://www.datum.net/docs/api/reference/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +84,60 @@ maintainers:
 common:
 - type: Website
   url: https://www.datum.net/
+- type: DeveloperPortal
+  url: https://www.datum.net/docs/
+- type: Documentation
+  url: https://www.datum.net/docs/
+- type: APIReference
+  url: https://www.datum.net/docs/api/reference/
+- type: GettingStarted
+  url: https://www.datum.net/docs/datumctl/quickstart.md
+- type: Blog
+  url: https://www.datum.net/blog/
+- type: Roadmap
+  url: https://www.datum.net/roadmap/
+- type: GitHubOrganization
+  url: https://github.com/datum-cloud
+- type: Support
+  url: https://www.datum.net/contact/
+- type: Pricing
+  url: https://www.datum.net/pricing/
+- type: SignUp
+  url: https://www.datum.net/pricing/
+- type: StatusPage
+  url: https://www.datumstatus.net
+- type: Authentication
+  url: authentication/datum-authentication.yml
+- type: OAuthScopes
+  url: scopes/datum-scopes.yml
+- type: OpenIDConnect
+  url: https://www.datum.net/.well-known/openid-configuration
+- type: WellKnown
+  url: well-known/datum-well-known.yml
+- type: APICatalog
+  url: https://www.datum.net/.well-known/api-catalog
+- type: MCPServer
+  url: mcp/datum-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: CLI
+  url: cli/datum-cli.yml
+- type: Packages
+  url: packages/datum-packages.yml
+- type: Components
+  url: components/datum-components.yml
+- type: LLMsTxt
+  url: llms/datum-llms.txt
+- type: Lifecycle
+  url: lifecycle/datum-lifecycle.yml
+- type: Conventions
+  url: conventions/datum-conventions.yml
+- type: Conformance
+  url: conformance/datum-conformance.yml
+- type: DomainSecurity
+  url: security/datum-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

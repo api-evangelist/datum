@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: github.com/datum-cloud, npmjs.com
+components:
+- family: Datum UI
+  package: "@datum-cloud/datum-ui"
+  registry: npm
+  url: https://www.npmjs.com/package/@datum-cloud/datum-ui
+  repo: https://github.com/datum-cloud/datum-ui
+  framework: react
+  description: Datum Cloud's React design system and component library.
+- family: Activity UI
+  package: "@datum-cloud/activity-ui"
+  registry: npm
+  url: https://www.npmjs.com/package/@datum-cloud/activity-ui
+  framework: react
+  description: React components for rendering Kubernetes Activity (audit/events/history).
+notes: >-
+  Client-side / embeddable UI component libraries, distinct from the datumctl CLI
+  and MCP server. Datum also ships a cloud-portal and desktop apps built on these.

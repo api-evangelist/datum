@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.datum.net/.well-known/api-catalog, https://www.datum.net/roadmap/
+versioning:
+  scheme: kubernetes-resource-model
+  note: >-
+    Datum Cloud exposes a Kubernetes-style declarative control plane; resource
+    types are versioned as API groups/versions (discoverable via
+    `datumctl api-resources`) rather than a single global API version.
+  docs: https://www.datum.net/docs/api/reference/
+status_page: https://www.datumstatus.net
+roadmap: https://www.datum.net/roadmap/
+backlog: https://github.com/datum-cloud/enhancements
+deprecation:
+  policy_url: null
+  note: No published deprecation/sunset policy located as of this pass.
+sla:
+  url: null
+  note: Forever-free Builder tier; production tiers from $20/month (see pricing).
+deprecated_operations: []

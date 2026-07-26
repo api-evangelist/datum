@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://www.datum.net/docs/datum-mcp.md
+servers:
+- name: datum-mcp
+  description: >-
+    Official Datum MCP server for managing Datum Cloud infrastructure from
+    MCP-aware AI clients (Claude Desktop, Cursor, and others). Exposes list/get/
+    create/update/delete operations across 13 Datum Cloud resource types.
+  transport: stdio
+  install: curl -fsSL https://github.com/datum-cloud/datum-mcp/releases/latest/download/install.sh | sh
+  repo: https://github.com/datum-cloud/datum-mcp
+  docs: https://www.datum.net/docs/datum-mcp.md
+  auth: OAuth 2.0 with PKCE (browser flow; refresh tokens stored in system keychain)
+  platforms: [linux, macos, windows]
+  arch: [x86_64, arm64]
+  resource_types:
+  - organizationmemberships
+  - users
+  - projects
+  - apis
+  - domains
+  - dnszones
+  - dnsrecordsets
+  - dnszoneclass
+  - gateways
+  - httpproxies
+  - httproutes
+  - trafficprotectionpolicies
+- name: datum-docs-mcp
+  description: >-
+    Datum Docs MCP — lets agents search and read the Datum documentation surface.
+  transport: sse
+  protocol: JSON-RPC 2.0 over SSE
+  url: https://www.datum.net/docs/mcp
+  docs: https://www.datum.net/docs/datumctl/ai/mcp-server.md
+  tools:
+  - name: search_datum_cloud_docs
+    description: Search the Datum Cloud documentation
+  - name: query_docs_filesystem_datum_cloud_docs
+    description: Query the docs filesystem for Datum Cloud docs

@@ -1,0 +1,76 @@
+# Datum Cloud Docs
+
+> Learn about Datum's open network cloud
+
+## Docs
+
+- [llms.txt](https://datum.net/docs/agents/llms-txt.md): A single-file index agents can fetch to discover Datum's full documentation surface.
+- [Agents Overview](https://datum.net/docs/agents/overview.md): How AI agents work with Datum Cloud — Skills, MCP, llms.txt, and datumctl.
+- [AI Edge skill](https://datum.net/docs/agents/skills/ai-edge.md): Teach agents to manage WAF, auth, and traffic policies on Datum's AI Edge — attaching policies to Gateways and HTTPRoutes via datumctl.
+- [Client Traffic skill](https://datum.net/docs/agents/skills/client-traffic.md): Teach agents to configure TLS termination, HTTP/3, connection limits, and client IP detection on Datum Cloud gateways.
+- [DNS skill](https://datum.net/docs/agents/skills/dns.md): Teach agents to manage DNS zones and record sets in Datum Cloud using datumctl.
+- [Domains skill](https://datum.net/docs/agents/skills/domains.md): Teach agents to attach and verify domains in Datum Cloud projects using datumctl.
+- [HTTPRoute skill](https://datum.net/docs/agents/skills/httproute.md): Teach agents to configure HTTP routing rules — path matching, traffic splitting, redirects, rewrites, and header manipulation on Datum Cloud.
+- [Overview](https://datum.net/docs/agents/skills/index.md): Self-contained instructions that teach AI agents how to perform Datum Cloud tasks.
+- [Metrics Export skill](https://datum.net/docs/agents/skills/metrics-export.md): Teach agents to configure Prometheus remote write pipelines in Datum Cloud using ExportPolicy resources.
+- [DNS Setup for AI Edge](https://datum.net/docs/ai-edge/dns-setup.md): Create a DNS zone, apex ALIAS record, and subdomain CNAME to point a domain at a Datum AI Edge endpoint.
+- [HTTP Basic Authentication with Datum](https://datum.net/docs/ai-edge/guides/basic-auth.md): Configure HTTP Basic Authentication for applications behind a Datum gateway using datumctl and Envoy Gateway SecurityPolicy.
+- [Individual User Authentication and Authorization with Auth0](https://datum.net/docs/ai-edge/guides/oidc-auth0.md): Configure per-user authentication and email-based authorization using Auth0 and Google social login for applications behind a Datum gateway.
+- [OAuth 2.0 / OIDC Authentication with Google and Datum](https://datum.net/docs/ai-edge/guides/oidc-google.md): Configure OIDC authentication using Google OAuth 2.0 for applications behind a Datum gateway using datumctl and Envoy Gateway SecurityPolicy.
+- [Host Header Override with HTTPProxy](https://datum.net/docs/ai-edge/host-header-override.md): Rewrite the Host header on upstream requests using an HTTPProxy RequestHeaderModifier filter.
+- [HTTP to HTTPS Redirect with HTTPProxy](https://datum.net/docs/ai-edge/https-redirect.md): Force HTTPS by redirecting all plain HTTP requests using a RequestRedirect filter on a Datum HTTPProxy.
+- [AI Edge](https://datum.net/docs/ai-edge/overview.md): Datum's AI Edge service is built on Envoy and provides an intelligent HTTPProxy along with a Coraza-based Web Application Firewall (WAF) to help you protect and route internet traffic to your backend services.
+- [Path-Based Routing with HTTPProxy](https://datum.net/docs/ai-edge/path-routing.md): Route requests to different backends based on URL paths using a Datum HTTPProxy.
+- [HTTPProxy and WAF Capabilities](https://datum.net/docs/ai-edge/proxy-waf.md): Reference overview of the HTTPProxy and TrafficProtectionPolicy resources that make up Datum's AI Edge.
+- [URL Rewrite with HTTPProxy](https://datum.net/docs/ai-edge/url-rewrite.md): Rewrite the path or hostname on upstream requests using a URLRewrite filter on a Datum HTTPProxy.
+- [WAF Configuration with TrafficProtectionPolicy](https://datum.net/docs/ai-edge/waf-configuration.md): Enable and configure the Coraza OWASP WAF for a Datum AI Edge using TrafficProtectionPolicy.
+- [Tunnels](https://datum.net/docs/connectors/tunnels.md): Datum's first Connector is a flexible tunnel powered by the Iroh protocol and built in QUIC.
+- [Datum MCP](https://datum.net/docs/datum-mcp.md): Datum's official MCP server helps builders connect AI tools to their Datum projects and integrates with popular AI assistants like Cursor.
+- [Audit logs & events](https://datum.net/docs/datumctl/activity/audit-and-events.md): Investigate who did what to which resource with datumctl activity audit, and surface resource lifecycle events and warnings with datumctl activity events.
+- [Change history & feed](https://datum.net/docs/datumctl/activity/change-history-and-feed.md): Trace what changed on a single resource with datumctl activity history, and watch a merged, human-readable timeline across resource types with datumctl activity feed.
+- [Querying activity](https://datum.net/docs/datumctl/activity/overview.md): Investigate what changed, who did it, and when — using the datumctl activity command family for audit records, resource events, a merged feed, and per-resource change history.
+- [AI assistant](https://datum.net/docs/datumctl/ai/assistant.md): Ask datumctl about your Datum Cloud resources in natural language, from a one-shot question or an interactive session.
+- [MCP server](https://datum.net/docs/datumctl/ai/mcp-server.md): Connect Claude Desktop, Cursor, and other MCP-aware AI clients to your Datum Cloud resources with the Datum MCP server.
+- [Local API proxy](https://datum.net/docs/datumctl/api-proxy.md): Run a local authenticated proxy so any tool on your machine can talk to the Datum Cloud API without handling tokens.
+- [Logging in](https://datum.net/docs/datumctl/auth/logging-in.md): Sign in to Datum Cloud from your terminal with datumctl login, verify who you are, and sign out.
+- [Managing accounts & tokens](https://datum.net/docs/datumctl/auth/managing-accounts.md): List, switch between, and remove locally authenticated Datum Cloud users, and print access tokens for tooling.
+- [Service accounts](https://datum.net/docs/datumctl/auth/service-accounts.md): Authenticate datumctl non-interactively with a service account credentials file for CI, automation, and headless environments.
+- [Automating datumctl in CI/CD](https://datum.net/docs/datumctl/cicd/automating.md): Run datumctl non-interactively in any pipeline — headless service-account login, credential helpers, structured errors, and exit-code handling on headless runners.
+- [GitHub Actions](https://datum.net/docs/datumctl/cicd/github-actions.md): Install and authenticate datumctl in GitHub Actions with the setup-datumctl-action, then run Datum Cloud commands in your workflows.
+- [Interactive console](https://datum.net/docs/datumctl/console.md): Browse, inspect, and monitor Datum Cloud resources in a full-screen, keyboard-driven terminal interface.
+- [Contexts & scoping](https://datum.net/docs/datumctl/contexts-and-scoping.md): How datumctl decides which organization or project a command acts on, and how to switch between them.
+- [Discovering resources & schemas](https://datum.net/docs/datumctl/discovering-resources.md): Find which Datum Cloud resource types exist and inspect their fields before you author manifests.
+- [GitOps with Flux & Argo CD](https://datum.net/docs/datumctl/gitops.md): Run a git-driven deployment flow onto Datum Cloud by pointing your GitOps tooling at a control plane through datumctl's exec-credential kubeconfig.
+- [Using datumctl with kubectl](https://datum.net/docs/datumctl/kubectl-interop.md): Point kubectl at a Datum Cloud control plane using your active datumctl session — an opt-in escape hatch for existing kubectl users.
+- [Kubernetes tools](https://datum.net/docs/datumctl/kubernetes-tools.md): Point Helm, the Terraform Kubernetes provider, k9s, and other kubeconfig-driven tools at a Datum Cloud control plane using your active datumctl session.
+- [Output formats & scripting](https://datum.net/docs/datumctl/output-and-scripting.md): Machine-readable output, structured errors, exit codes, and patterns for wrapping datumctl in CI pipelines and AI agents.
+- [datumctl](https://datum.net/docs/datumctl/overview.md): High level overview of the Datum Cloud CLI.
+- [Adding Catalogs](https://datum.net/docs/datumctl/plugins/adding-catalogs.md): Register additional and internal plugin catalogs, and understand the trust decision and enterprise guardrails involved.
+- [Building Plugins](https://datum.net/docs/datumctl/plugins/building-plugins.md): Build a datumctl plugin in Go using the official SDK — manifest, context injection, credentials, and command forwarding.
+- [Publishing Catalogs](https://datum.net/docs/datumctl/plugins/publishing-catalogs.md): Author, validate, and host a datumctl plugin catalog so users and enterprises can discover and install your plugins.
+- [Using Plugins](https://datum.net/docs/datumctl/plugins/using-plugins.md): Install, run, and manage datumctl plugins that extend the CLI with additional commands.
+- [Quickstart](https://datum.net/docs/datumctl/quickstart.md): Install datumctl, log in, pick a context, and run your first command.
+- [Changing resources](https://datum.net/docs/datumctl/resources/changing.md): Create, update, and delete Datum Cloud resources — with declarative apply as the primary workflow.
+- [Reading resources](https://datum.net/docs/datumctl/resources/reading.md): List, retrieve, and inspect Datum Cloud resources with datumctl get and datumctl describe.
+- [Safe changes & declarative config](https://datum.net/docs/datumctl/resources/safe-changes.md): Preview changes before you write them, manage Datum Cloud resources declaratively, and keep your infrastructure in sync from source control.
+- [Desktop Apps](https://datum.net/docs/desktop-apps.md): Datum offers native developer apps for macOS, Linux, and Windows that help you safely and quickly expose local environments to the internet using a secure Rust-based tunnel connected to an AI Edge on our global network.
+- [DNS](https://datum.net/docs/domain-dns/dns.md): We offer authoritative DNS hosting for your domains that you can manage through the Datum Cloud portal as well as CLI.
+- [Domains](https://datum.net/docs/domain-dns/domains.md): Track your domains in one place regardless of where they are registered to gain programmatic access to foundational infrastructure components.
+- [Features](https://datum.net/docs/features.md): Datum is currently building a public cloud with a generous forever free tier that gives access to enterprise-grade networking primitives.
+- [Galactic VPC](https://datum.net/docs/galactic-vpc/overview.md): Datum is developing a global, virtual backbone service called Galactic VPC for traffic routing and connections.
+- [Get Involved](https://datum.net/docs/get-involved.md): Datum is an open source company; we are building in the open and encourage feedback, contributions, questions, bug reports etc.
+- [Introduction](https://datum.net/docs/index.md): Datum's approach to an open, neutral, global network cloud built for AI and focused on providers.
+- [Kubernetes](https://datum.net/docs/kubernetes.md): Datum believes in a Kubernetes-Native approach; Datum's control plane is built on Kubernetes Custom Resource Definitions (CRDs)
+- [Overview](https://datum.net/docs/overview.md): Docs for developers and agents
+- [Activity Logs](https://datum.net/docs/platform/activity-logs.md): Query and filter audit logs in the Datum Cloud portal to track changes across your organizations and projects
+- [Locations](https://datum.net/docs/platform/locations.md): Datum is available in 17+ global locations, organized into points of presence (PoPs), packaged into Regions and Availability Zones (AZs)
+- [Metrics Export](https://datum.net/docs/platform/metrics-export.md): Datum collects OpenTelemetry metrics from your Datum infrastructure services, giving visibility into the performance and health of your workloads.
+- [Secrets](https://datum.net/docs/platform/secrets.md): Learn how to create secret resources within projects
+- [Service Accounts](https://datum.net/docs/platform/service-accounts.md): Create non-human identities for applications, CI/CD pipelines, and services to authenticate with Datum APIs
+- [Account Setup](https://datum.net/docs/platform/setup.md): Datum Cloud Onboarding - How to create a user account, set up an organization, manage and collaborate with team members
+
+## Optional
+
+- [Discord](https://link.datum.net/discord)
+- [YouTube](https://link.datum.net/youtube)
+- [GitHub](https://link.datum.net/github)

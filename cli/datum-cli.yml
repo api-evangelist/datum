@@ -1,0 +1,54 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.datum.net/docs/datumctl/overview.md
+name: datumctl
+description: >-
+  The Datum Cloud command-line interface. A Kubernetes-style CLI for reading and
+  changing Datum Cloud resources declaratively, with an interactive console,
+  AI assistant, activity/audit querying, plugins, and kubectl/Helm/Terraform
+  interop through an exec-credential kubeconfig.
+language: go
+repo: https://github.com/datum-cloud/datumctl
+docs: https://www.datum.net/docs/datumctl/overview.md
+quickstart: https://www.datum.net/docs/datumctl/quickstart.md
+install:
+- method: homebrew
+  commands:
+  - brew tap datum-cloud/homebrew-tap
+  - brew trust --formula datum-cloud/homebrew-tap/datumctl
+  - brew install datumctl
+- method: binary
+  note: Download a pre-built binary from GitHub Releases and place it on PATH.
+  url: https://github.com/datum-cloud/datumctl/releases
+auth:
+  scheme: OAuth 2.0 with PKCE
+  note: >-
+    datumctl login opens a browser (or --no-browser device-code flow); credentials
+    are stored in the system keyring — there are no API keys to manage. Service
+    accounts supported for CI/headless use.
+command_groups:
+- name: login / auth
+  description: Sign in, manage locally authenticated accounts, print access tokens,
+    service-account auth.
+- name: ctx (contexts & scoping)
+  description: Select the active organization or project a command acts on.
+- name: get / describe (reading resources)
+  description: List, retrieve, and inspect Datum Cloud resources.
+- name: apply / create / update / delete (changing resources)
+  description: Declarative apply is the primary workflow; preview changes before writing.
+- name: api-resources
+  description: Discover which resource types exist and inspect their fields.
+- name: activity (audit / events / history / feed)
+  description: Investigate who did what to which resource over time.
+- name: ai (assistant / mcp-server)
+  description: Natural-language assistant and MCP server for AI clients.
+- name: api-proxy
+  description: Local authenticated proxy so any tool can talk to the Datum Cloud API.
+- name: console
+  description: Full-screen, keyboard-driven terminal UI to browse and monitor resources.
+- name: plugins
+  description: Install, run, build, and publish datumctl plugins and catalogs.
+key_flows:
+- GitOps with Flux & Argo CD via exec-credential kubeconfig
+- kubectl / Helm / Terraform / k9s interop against a Datum control plane
+- GitHub Actions automation via setup-datumctl-action

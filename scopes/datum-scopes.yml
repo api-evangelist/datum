@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.datum.net/.well-known/openid-configuration
+docs: https://www.datum.net/docs/datumctl/auth/logging-in.md
+schemes:
+- name: OAuth2
+  source: well-known/datum-openid-configuration.json
+  authorizationUrl: https://auth.datum.net/oauth/v2/authorize
+  tokenUrl: https://auth.datum.net/oauth/v2/token
+scopes:
+- scope: openid
+  description: OIDC authentication — issue an ID token.
+- scope: profile
+  description: Access to the user's basic profile claims (name, preferred_username, locale).
+- scope: email
+  description: Access to the user's email address and verification status.
+- scope: phone
+  description: Access to the user's phone number and verification status.
+- scope: address
+  description: Access to the user's address claim.
+- scope: offline_access
+  description: Issue a refresh token for long-lived, offline access.
+note: >-
+  These are the standard OIDC scopes advertised by the Datum identity provider
+  (auth.datum.net). Resource-level authorization on the Datum Cloud control-plane
+  API is enforced via RBAC on the bearer token rather than fine-grained OAuth
+  scopes.

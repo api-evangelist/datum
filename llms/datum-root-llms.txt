@@ -1,0 +1,51 @@
+# Datum
+
+## About
+
+> Datum is an open source network cloud for AI, founded in 2024 and backed by $13.6M from Amplify Partners, CRV, Encoded Ventures, Cervin Ventures, Ex/Ante, Step Function, and Vine Ventures. Built for AI-native developers and alternative cloud providers, Datum provides an Envoy-based AI Edge across 17+ global regions, QUIC-based secure tunnels (Connectors), authoritative DNS, and programmatic domain management — all with a forever-free Builder tier. Core platform licensed AGPLv3. Founded by Zac Smith (ex-Equinix, Packet) and Jacob Smith.
+
+## Pages
+
+- [Connected infrastructure for AI companies.](https://www.datum.net/) - Datum is an open, neutral, global network cloud built for AI — giving alternative cloud providers critical network infrastructure to compete at scale.
+- [Alt Cloud Meetups](https://www.datum.net/alt-cloud-meetups/) - Join Datum's Alt Cloud Meetups to connect with open-source network cloud builders, AI-native developers, and alt-cloud providers.
+- [Backlog](https://www.datum.net/backlog/) - Browse the Datum product backlog on GitHub. See what we are building, planning, and considering next, vote for your favorites, or request new features.
+- [Read the latest from our team](https://www.datum.net/blog/) - Read about our company vision, product direction, and learnings from our engineering team
+- [Our visual identity](https://www.datum.net/brand/) - Explore the Datum brand design system: design principles, typography, color palettes, logos, and illustration suite for a hyperscale-ready framework.
+- [Color](https://www.datum.net/brand/color/) - Access the official color palette for Datum. Get hex codes, primary and secondary color usage for the open network cloud brand identity.
+- [Iconography](https://www.datum.net/brand/iconography/) - Datum uses the open-source Lucide icon library: lightweight, scalable vector symbols with a friendly yet precise tone across all digital experiences.
+- [The Datum illustrations](https://www.datum.net/brand/imagery/) - Explore Datum's Illustration Suite, including Milo character art, imagery, and design guidelines that define the Datum visual brand universe.
+- [The Datum logo](https://www.datum.net/brand/logos/) - Access Datum brand logos, stacked and horizontal formats for all your needs. Download official brand assets and usage guidelines for digital and print.
+- [Design Principles](https://www.datum.net/brand/principles/) - Explore Datum's core principles: Grounded and Visionary; Approachable and Expert; Proactive and Driven; and Conscientious and Ethical.
+- [Social logos and favicons](https://www.datum.net/brand/social/) - Download Datum's official social assets: favicons, social icons, OpenGraph images, and GitHub graphics for digital and marketing projects.
+- [Templates](https://www.datum.net/brand/templates/) - Download Datum's official presentation, document, and design templates — ready-to-use assets aligned with our brand guidelines.
+- [Typography](https://www.datum.net/brand/typography/) - Review Datum's official brand typography: core typefaces Canela and Alliance No.1, reflecting our ethos as an open, global tech company.
+- [Working at Datum](https://www.datum.net/career/) - Explore open roles at Datum. We're building connected infrastructure for AI and hiring thoughtful engineers, marketers, and operators.
+- [Monthly Community Huddles](https://www.datum.net/community-huddles/) - Join Datum's monthly open community huddle — an informal session for live demos, open discussion, Q&A, and the latest Datum product and ecosystem updates.
+- [We're all about connecting, so how about a chat?](https://www.datum.net/contact/) - Ways to contact Datum to help grow your skills, your revenue, and your ecosystem advantage with our open network cloud platform and community.
+- [Datum Documentation](https://www.datum.net/docs/) - Learn how to use Datum's specialized cloud services. Documentation for the datumctl CLI, AI Gateway, and secure cloud interconnects for modern applications.
+- [QUIC, get to the choppa!](https://www.datum.net/download/) - Tools to help you unlock internet superpowers with Datum
+- [Batteries included](https://www.datum.net/essentials/) - Enterprise-grade networking primitives like Authoritative DNS, Domains, Metrics Export, RBAC, SSO and audit logs for free.
+- [Events](https://www.datum.net/events/) - Discover upcoming Datum events, conferences, and community meetups. Join us to connect with fellow AI-native builders, developers and alt-cloud providers.
+- [Built for Agents](https://www.datum.net/features/) - Critical network infrastructure for agents — Zero Trust architecture, AI Edge with Coraza WAF, distributed Envoy proxy, and QUIC-powered global tunnels.
+- [We're obsessed with tomorrow's clouds](https://www.datum.net/global-section/) - We believe there is an awesome new wave of specialized security, networking, data and AI platforms being born. If you're building something big, we'd like to help you accelerate enterprise deals, remove customer friction, and turn internet foundations into your advantage.
+- [Network Locations](https://www.datum.net/locations/) - Datum's network is deployed at major internet peering points for low-latency access to public clouds, AI clouds, and end users.
+- [Open is Our Strategy](https://www.datum.net/open-source/) - Learn how Datum is leveraging open-source projects including Milo, HickoryDNS, and the Envoy AI Gateway, along with technologies like Crossplane and SRv6.
+- [Interact at scale, no network team required](https://www.datum.net/pricing/) - A low-friction plan for builders, developers, and agents — enterprise-grade network primitives free. Production tier from $20/month. Start building free today.
+- [Roadmap](https://www.datum.net/roadmap/) - Explore Datum’s public roadmap to see upcoming product updates, vote for your favorites, or request new features. Help us shape the future of open-source network cloud and ai-native connectivity.
+
+## Docs
+
+- Full documentation index at https://www.datum.net/docs/llms.txt
+
+## MCP
+
+- [Datum Docs MCP](https://www.datum.net/docs/mcp) - MCP server for AI agents to search and read Datum documentation (JSON-RPC 2.0 over SSE). Tools: `search_datum_cloud_docs`, `query_docs_filesystem_datum_cloud_docs`.
+
+## Skills
+
+- [Datum Cloud Skills](https://github.com/datum-cloud/skills) - Agent skills for working with Datum Cloud APIs and infrastructure primitives. Install via `/plugin marketplace add datum-cloud/skills` (Claude Code), `npx skills add https://github.com/datum-cloud/skills` (npx), or remote rule settings (Cursor). Available: ai-edge, client-traffic, dns, domains, httproute, metrics-export.
+
+## Optional
+
+- Full site content at https://www.datum.net/llms-full.txt
+- Full documentation content at https://www.datum.net/docs/llms-full.txt

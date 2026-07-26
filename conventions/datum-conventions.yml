@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.datum.net/docs/datumctl/, https://www.datum.net/docs/api/reference/
+authentication:
+  style: OAuth 2.0 / OIDC bearer tokens (PKCE for interactive; service accounts for CI)
+  ref: authentication/datum-authentication.yml
+api_model:
+  style: kubernetes-resource-model
+  description: >-
+    Datum Cloud is a Kubernetes-style declarative control plane. Clients describe
+    desired resource state (YAML/JSON manifests) and the platform reconciles it.
+    The same surface is reachable via datumctl, kubectl/Helm/Terraform (through an
+    exec-credential kubeconfig), the MCP server, and a local authenticated
+    api-proxy.
+  resource_discovery: datumctl api-resources
+idempotency:
+  supported: true
+  mechanism: declarative-apply
+  note: >-
+    Declarative `apply` is idempotent by construction — re-applying the same
+    manifest converges to the same resource state. Optimistic concurrency uses
+    the resource version/generation fields of the Kubernetes resource model. No
+    separate Idempotency-Key request header is documented.
+pagination:
+  style: kubernetes-list
+  note: List operations follow the Kubernetes list convention (continue tokens /
+    limit) surfaced through datumctl get.
+scoping:
+  note: Commands and API calls are scoped to an organization and project (context).
+  docs: https://www.datum.net/docs/datumctl/contexts-and-scoping.md
+tracing:
+  audit: >-
+    Activity/audit records, resource events, change history, and a merged feed are
+    queryable (datumctl activity ...).
+  docs: https://www.datum.net/docs/datumctl/activity/overview.md
+output_formats:
+  note: Machine-readable output, structured errors, and exit codes for scripting.
+  docs: https://www.datum.net/docs/datumctl/output-and-scripting.md
+errors:
+  envelope: kubernetes-status
+  note: Errors follow the Kubernetes Status object shape; structured errors and
+    exit codes surfaced through datumctl.
+cross_links:
+  authentication: authentication/datum-authentication.yml
+  lifecycle: lifecycle/datum-lifecycle.yml
+  scopes: scopes/datum-scopes.yml

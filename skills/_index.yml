@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/datum-cloud/skills
+docs: https://www.datum.net/docs/agents/skills/index.md
+install:
+  claude_code: /plugin marketplace add datum-cloud/skills && /plugin install datum-cloud@datum-cloud
+  npx: npx skills add https://github.com/datum-cloud/skills
+  cursor: Settings -> Rules -> Add Rule -> Remote Rule (GitHub) -> datum-cloud/skills
+skills:
+- file: datum-ai-edge.md
+  name: AI Edge skill
+  description: Manage WAF, auth, and traffic policies on Datum's AI Edge — attaching
+    policies to Gateways and HTTPRoutes via datumctl.
+  api: Datum Cloud API
+- file: datum-client-traffic.md
+  name: Client Traffic skill
+  description: Configure TLS termination, HTTP/3, connection limits, and client IP
+    detection on Datum Cloud gateways.
+  api: Datum Cloud API
+- file: datum-dns.md
+  name: DNS skill
+  description: Manage DNS zones and record sets in Datum Cloud using datumctl.
+  api: Datum Cloud API
+- file: datum-domains.md
+  name: Domains skill
+  description: Attach and verify domains in Datum Cloud projects using datumctl.
+  api: Datum Cloud API
+- file: datum-httproute.md
+  name: HTTPRoute skill
+  description: Configure HTTP routing rules — path matching, traffic splitting,
+    redirects, rewrites, and header manipulation on Datum Cloud.
+  api: Datum Cloud API
+- file: datum-metrics-export.md
+  name: Metrics Export skill
+  description: Configure Prometheus remote write pipelines in Datum Cloud using
+    ExportPolicy resources.
+  api: Datum Cloud API

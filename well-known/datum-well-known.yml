@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: live probe of /.well-known/ on www.datum.net + api.datum.net
+host: https://www.datum.net
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: datum-openid-configuration.json
+  note: OIDC discovery for issuer https://auth.datum.net
+- path: /.well-known/api-catalog
+  status: 200
+  file: datum-api-catalog.json
+  note: RFC 9727 api-catalog linkset — service-desc, service-doc, status links
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: https://api.datum.net/.well-known/openid-configuration
+  status: 403
+  note: API host auth-gated

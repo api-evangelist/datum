@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.datum.net/.well-known/openid-configuration, https://www.datum.net/.well-known/api-catalog
+standards:
+- id: oauth2
+  conforms: true
+  evidence: OAuth 2.0 authorization/token/introspection/revocation endpoints advertised at auth.datum.net
+- id: oidc
+  conforms: true
+  evidence: /.well-known/openid-configuration present with issuer https://auth.datum.net
+- id: oauth2-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported = [S256]
+- id: oauth2-device-authorization-grant
+  conforms: true
+  evidence: device_authorization_endpoint advertised; urn:ietf:params:oauth:grant-type:device_code supported
+- id: rfc9727-api-catalog
+  conforms: true
+  evidence: /.well-known/api-catalog present as application/linkset+json
+- id: kubernetes-resource-model
+  conforms: true
+  evidence: declarative control plane; kubectl/Helm/Terraform interop via exec-credential kubeconfig
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 404
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: control plane uses Kubernetes Status error envelope, not application/problem+json
