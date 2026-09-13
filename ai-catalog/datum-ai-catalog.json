@@ -1,0 +1,32 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Datum",
+    "identifier": "did:web:www.datum.net"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:www.datum.net:mcp:datum-mcp",
+      "displayName": "Datum MCP Server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://www.datum.net/mcp/server-card",
+      "representativeQueries": [
+        "list my Datum Cloud projects",
+        "create a DNS record in my Datum Cloud zone",
+        "set up an HTTP proxy route for my service",
+        "show my organization's gateways"
+      ]
+    },
+    {
+      "identifier": "urn:air:www.datum.net:api:openapi",
+      "displayName": "datum.net OpenAPI spec",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://www.datum.net/openapi.json",
+      "representativeQueries": [
+        "is the Datum roadmap backlog cache still refreshing",
+        "what's Datum's API versioning and deprecation policy",
+        "what are the rate limit response headers for Datum's public API"
+      ]
+    }
+  ]
+}
