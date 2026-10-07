@@ -1,0 +1,114 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.datum.net/pricing
+sources:
+- https://www.datum.net/pricing
+- https://www.datum.net/pricing/
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Usage-based rate card; platform currently free during public beta. No seat or feature-gated tiers;
+  500TB+ egress is contact sales.
+plan_count: 15
+currency: USD
+plans:
+- name: DNS Requests
+  price_text: $ 0.60 per million after the first 500K
+  price: 0.6
+  currency: USD
+  period: per-use
+  unit: per million requests
+  included_quota: first 500K
+- name: ALB Requests
+  price_text: $ 1.00 per million
+  price: 1.0
+  currency: USD
+  period: per-use
+  unit: per million requests
+- name: GSLB Requests
+  price_text: $ 0.60 per million
+  price: 0.6
+  currency: USD
+  period: per-use
+  unit: per million requests
+- name: Compute vCPU
+  price_text: $ 0.0504 per hour
+  price: 0.0504
+  currency: USD
+  period: per-use
+  unit: vCPU hour
+- name: Compute GiB of Memory
+  price_text: $ 0.0162 per hour
+  price: 0.0162
+  currency: USD
+  period: per-use
+  unit: GiB hour
+- name: Object Storage Standard tier
+  price_text: $ 0.0085 per GB per month
+  price: 0.0085
+  currency: USD
+  period: month
+  unit: GB
+- name: Object Storage Performance tier
+  price_text: $ 0.024 per GB per month
+  price: 0.024
+  currency: USD
+  period: month
+  unit: GB
+- name: Gateways
+  price_text: $ 0.045 per hour
+  price: 0.045
+  currency: USD
+  period: per-use
+  unit: hour
+- name: Tunnels Endpoint
+  price_text: $ 0.01 per hour
+  price: 0.01
+  currency: USD
+  period: per-use
+  unit: hour
+- name: Public IPv4
+  price_text: $ 0.005 /IP-hr
+  price: 0.005
+  currency: USD
+  period: per-use
+  unit: IP-hour
+- name: Egress 200 GB – 10 TB
+  price_text: $ 0.05 per GB
+  price: 0.05
+  currency: USD
+  period: per-use
+  unit: GB
+  included_quota: 0 – 200 GB Free
+- name: Egress 10 – 150 TB
+  price_text: $ 0.04 per GB
+  price: 0.04
+  currency: USD
+  period: per-use
+  unit: GB
+- name: Egress 150 – 500 TB
+  price_text: $ 0.03 per GB
+  price: 0.03
+  currency: USD
+  period: per-use
+  unit: GB
+- name: Egress 500 TB+
+  price_text: Contact sales
+  period: per-use
+  unit: GB
+- name: Internal cross-region transfer
+  price_text: $ 0.03 per GB
+  price: 0.03
+  currency: USD
+  period: per-use
+  unit: GB
+  included_quota: Same region Free
